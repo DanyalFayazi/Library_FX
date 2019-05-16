@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="652.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox layoutX="6.0" layoutY="56.0" prefHeight="382.0" prefWidth="322.0">
+         <children>
+            <Button fx:id="Add_Book" mnemonicParsing="false" onAction="#Add_Book" prefHeight="50.0" prefWidth="296.0" style="-fx-background-radius: 50%; -fx-background-color: #00ffff;" text="Add Book">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Edit_Book" mnemonicParsing="false" onAction="#Edit_Book" prefHeight="50.0" prefWidth="296.0" style="-fx-background-radius: 50%; -fx-background-color: #ff4500;" text="Edit a book">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Request_Book" mnemonicParsing="false" onAction="#Request_Book" prefHeight="50.0" prefWidth="296.0" style="-fx-background-radius: 50%; -fx-background-color: #00ffff;" text="Request a book">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Give_Book_to_Others" mnemonicParsing="false" onAction="#Give_Book_to_Others" prefHeight="50.0" prefWidth="296.0" style="-fx-background-radius: 50%; -fx-background-color: #ff4500;" text="Requested books">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="add_to_gen" mnemonicParsing="false" onAction="#Add_to_Gen" prefHeight="50.0" prefWidth="296.0" style="-fx-background-radius: 50%; -fx-background-color: #00ffff;" text="ADD a Book to the General List">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Button fx:id="Refresh" layoutX="503.0" layoutY="14.0" mnemonicParsing="false" onAction="#Refresh" prefHeight="50.0" prefWidth="113.0" style="-fx-background-color: #00ff00; -fx-background-radius: 50;" text="Refresh" />
+      <Label fx:id="refresh_status" layoutX="40.0" layoutY="14.0" prefHeight="40.0" prefWidth="448.0" style="-fx-background-color: gray;">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5194174757281553" radius="0.5">
+               <stops>
+                  <Stop color="#f0ffa6" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <ListView fx:id="ls_books" layoutX="478.0" layoutY="197.0" prefHeight="439.0" prefWidth="164.0" AnchorPane.rightAnchor="10.0" />
+      <RadioButton fx:id="all_books" layoutX="488.0" layoutY="90.0" mnemonicParsing="false" text="ALL Of Your Books">
+         <toggleGroup>
+            <ToggleGroup fx:id="group1" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="general_books" layoutX="488.0" layoutY="126.0" mnemonicParsing="false" text="General Books" toggleGroup="$group1" />
+      <Button fx:id="test" layoutX="518.0" layoutY="158.0" mnemonicParsing="false" onAction="#Show_list" style="-fx-background-color: transparent;" text="Show List" textFill="#da17a3" />
+      <Button fx:id="home" layoutX="84.0" layoutY="540.0" mnemonicParsing="false" onAction="#Home" style="-fx-border-radius: 15; -fx-border-color: black;" text="Back to home" />
+   </children>
+</AnchorPane>
